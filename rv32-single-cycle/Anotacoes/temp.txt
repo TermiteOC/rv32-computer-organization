@@ -1,0 +1,11 @@
+suporte: beq, lw, sw, 
+	 formato i - addi
+         formato r - add, sub, slt, or, and
+
+vcom -2008 datapath/banco-de-registradores/*.vhd
+vcom -2008 datapath/ula/*.vhd
+vcom -2008 datapath/*.vhd
+vcom -2008 controlador/*.vhd
+vcom -2008 *.vhd
+vsim tb_rv32_top
+add wave *
